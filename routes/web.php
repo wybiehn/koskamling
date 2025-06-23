@@ -1,4 +1,4 @@
-<?php
+<?php //we wok de tok not onle tok de tok
 
 use Illuminate\Support\Facades\Route;
 
