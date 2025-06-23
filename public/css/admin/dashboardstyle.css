@@ -1,0 +1,433 @@
+body {
+    color: #6B3FA0;
+    background-image: linear-gradient(to right, white, rgb(205, 205, 205));
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to right, #522f7e, #643c94);
+}
+
+.logo-header {
+    width: 100px;
+}
+
+.search-bar {
+    padding: 6px 10px;
+    margin-left: 30px;
+    border-radius: 25px;
+    width: 320px;
+    height: 30px;
+    border: none;
+    transition: 0.5s;
+}
+
+.search-bar:hover {
+    padding: 8px 12px;
+    transition: 0.5s;
+}
+
+.header-kiri {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.header-kanan a {
+    color: white;
+    margin: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header-kanan a:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    font-size: 20px;
+    padding: 10px 30px;
+    background-color: #6B3FA0;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+
+.login-button:hover {
+    background-color: #ffffff;
+    color: #643c94;
+    font-size: 22px;
+    scale: 0.05;
+    transition: 0.5s;
+}
+
+.catchphrase h1 {
+    text-align: left;
+    font-size: 80px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: roboto;
+    margin: 40px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    color: #4e297b;
+}
+
+.question {
+    margin-left: 70px;
+    font-size: 20px;
+    color: #4e297b;
+}
+
+.daftar-property {
+  margin: 25px;
+  margin-top: 0px;
+  border-radius: 0px 40px 40px 40px ;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-image: linear-gradient(to top, #522f7e, #643c94);
+  padding: 35px;
+}
+
+.daftar-property h1 {
+  color: #f9f9f9;
+  font-size: 50px;
+}
+
+.statistik h1 {
+  color: #ffffff;
+  max-width: 450px;
+  background-color: #643c94 ;
+  padding: 30px;
+  border-radius: 30px;
+  font-size: 40px;
+  margin: 25px;
+  margin-bottom: 0px;
+  margin-top: 60px;
+  border-radius: 60px 60px 0px 0px;
+}
+
+.property-card {
+  margin: 30px;
+  margin-bottom: 100px;
+  font-size: 30px;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.property-card h2 {
+  color: #f9f9f9;
+}
+
+.property {
+  display: flex;
+  background-color: #f9f9f9;
+  border-radius: 50px;
+  overflow: hidden;
+  padding: 30px;
+  gap: 20px;
+  
+}
+
+.photo-kos {
+  margin: 20px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 15px;
+  width: 550px;
+  max-height: 450px;
+  margin-right: 0px;
+}
+
+.photo-kos1, .photo-kos2 {
+  margin: 20px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 15px;
+  width: 350px;
+  max-height: 215px;
+}
+
+h1 {
+    font-size: 40px;
+    display: flex;
+    color: #4e297b;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-container {
+    display: flex;
+}
+
+.title-container h1 {
+    font-size: 40px;
+    display: flex;
+    color: #ffffff;
+}
+
+.gender {
+    margin-left: 10px;
+    margin-top: 25px;
+    font-size: 20px;
+    border: solid 1px #4e297b;
+    border-radius: 30px;
+    width: 100px;
+    padding: 2px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+
+.price-container {
+    display: flex;    
+    align-items: center; 
+}
+
+.price {
+  font-weight: bold;
+  color: #444;
+  font-size: 25px
+}
+
+.permonth {
+  font-weight: bold;
+  color: #4e297b;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+
+.address {
+    font-size: 20px;
+    max-width: 400px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.facility {
+    color: #643c94;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.facility-list {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 0;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.actions button {
+  padding: 6px 14px;
+  margin-left: 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.actions .edit {
+  width: 150px;
+  margin-top: 15px;
+  padding: 15px;
+  font-size: 20px;
+  background-image: linear-gradient( #522f7e, #643c94);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.actions .edit:hover {
+  width: 150x;
+  padding: 18px;
+  background-image: linear-gradient( rgb(228, 228, 228), white);
+  color: #643c94;
+  border: 1px solid #643c94;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.actions .delete {
+  width: 150px;
+  margin-top: 15px;
+  padding: 15px;
+  font-size: 20px;
+  background-image: linear-gradient( #ac2929, #c62828);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.actions .delete:hover {
+  width: 150x;
+  padding: 18px;
+  background-image: linear-gradient( rgb(228, 228, 228), white);
+  color: #c62828;
+  border: 1px solid #c62828;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.actions .add {
+  width: 250px;
+  margin-top: 15px;
+  padding: 35px;
+  font-size: 20px;
+  margin-left: 170px;
+  background-image: linear-gradient( #522f7e, #643c94);
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.actions .add:hover {
+  width: 260px;
+  padding: 40px;
+  background-image: linear-gradient( rgb(228, 228, 228), white);
+  color: #643c94;
+  border: 1px solid #643c94;
+  border-radius: 55px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 25px;
+}
+
+.profil-container {
+  display: flex;
+  flex-direction: column; 
+  gap: 30px;
+}
+
+.profil-row {
+  display: flex;
+  gap: 40px; /* Jarak antara label dan isi */
+  align-items: flex-start;
+}
+
+.profil, .isi-profil {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.title-container h1 {
+  font-size: 40px;
+  display: flex;
+  color: #4e297b;
+}
+
+.title-container h2 {
+  font-size: 30px;
+  display: flex;
+  color: #ffffff;
+}
+
+.actions2 button {
+  padding: 6px 14px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  width: 150px;
+  padding: 15px;
+  background-image: linear-gradient(rgb(228, 228, 228), white);
+  color: #643c94;
+}
+
+.actions2 .edit {
+  width: 150px;
+  margin-top: 15px;
+  padding: 15px;
+  font-size: 20px;
+  background-image: linear-gradient(rgb(228, 228, 228), white);
+  color: #643c94;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  
+}
+
+.actions2 .edit:hover {
+  width: 150x;
+  padding: 18px;
+  background-image: linear-gradient(  #522f7e, #643c94);
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.actions2 button:hover {
+  background-image: linear-gradient(#522f7e, #643c94);
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  transition: 0.5s;
+}
+
+.footer {
+    background-image: linear-gradient(to right, white, rgb(205, 205, 205));
+    color: #4e297b;
+    display: flex;
+    align-items: flex-start;
+    padding: 40px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.logo-footer {
+    width: 150px;
+    padding: 20px;
+}
+
+.footer h2 {
+    font-size: 40px;
+    font-family: 'Brush Script MT', cursive;
+    margin-bottom: 12px;
+}
+
+.footer-text {
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    color: #643c94;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-text:hover {
+    text-decoration: underline;
+}

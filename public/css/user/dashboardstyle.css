@@ -1,0 +1,553 @@
+body {
+    color: #6B3FA0;
+    background-image: linear-gradient(to right, white, rgb(205, 205, 205));
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to right, #522f7e, #643c94);
+}
+
+.logo-header {
+    width: 100px;
+}
+
+.search-bar {
+    padding: 6px 10px;
+    margin-left: 30px;
+    border-radius: 25px;
+    width: 320px;
+    height: 30px;
+    border: none;
+    transition: 0.5s;
+}
+
+.search-bar:hover {
+    padding: 8px 12px;
+    transition: 0.5s;
+}
+
+.header-kiri {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.header-kanan a {
+    color: white;
+    margin: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header-kanan a:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    font-size: 20px;
+    padding: 10px 30px;
+    background-color: #6B3FA0;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+
+.login-button:hover {
+    background-color: #ffffff;
+    color: #643c94;
+    font-size: 22px;
+    scale: 0.05;
+    transition: 0.5s;
+}
+
+
+.catchphrase h1 {
+    text-align: left;
+    font-size: 80px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: roboto;
+    margin: 40px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    color: #4e297b;
+    
+}
+
+.recomendation-top {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.rekomendasi-kos {
+    max-width: 490px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #643c94;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.rekomendasi-kos img {
+    width: 400px;
+    max-height: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+    justify-content: left;
+}
+
+.rekomendasi-kos:hover {
+    background-image: linear-gradient(#d5bbe6, #b99ace) ;
+    color: #4e297b;  
+    scale: 1.05;
+    transition: 0.5s;
+}
+
+.recomendation-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+}
+
+.recomendation-top {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: nowrap;
+    width: max-content;
+}
+
+.title-container {
+    display: flex;
+}
+
+.title-container h1 {
+    font-size: 40px;
+    display: flex;
+    color: #000000;
+}
+.info .title-container h1 {
+    font-size: 40px;
+    display: flex;
+    color: #000000;
+}
+
+.rekomendasi-kos .title-container h1 {
+    font-size: 40px;
+    display: flex;
+    color: #000000;
+}
+
+.gender {
+    margin-left: 10px;
+    margin-top: 25px;
+    font-size: 20px;
+    border: solid 1px #4e297b;
+    border-radius: 30px;
+    width: 100px;
+    padding: 2px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.filter {
+    margin-left: 50px;
+    margin-top: 25px;
+    font-size: 29px;
+    border: solid 4px #4e297b;
+    border-radius: 30px;
+    width: 130px;
+    padding: 2px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.filter:hover{
+    margin-left: 50px;
+    margin-top: 25px;
+    font-size: 29px;
+    border: solid 4px #4e297b;
+    background-color: #4e297b;
+    border-radius: 30px;
+    color: white;
+    width: 135px;
+    padding: 5;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.price-container {
+    display: flex;    
+    align-items: center; 
+}
+
+.price {
+  font-weight: bold;
+  color: #000000;
+  font-size: 25px
+}
+
+.permonth {
+  font-weight: bold;
+  color: #4e297b;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+
+.address {
+    font-size: 20px;
+    max-width: 400px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.deskripsi {
+    background-image: linear-gradient( #522f7e, #643c94);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.deskripsi h3 {
+    font-style: italic;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.sub-deskripsi {
+    font-size: 25px;
+    max-width: 400px;
+    text-align: justify;
+    line-height: 1.5;
+    font-family:  'Brush Script MT', cursive;
+}
+
+.logo-subdivisi {
+    width: 100px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.daftar-kota h2 {
+    text-align: left;
+    padding-left: 100px;
+    font-style: italic;
+    font-size: 50px;
+    color: #522f7e;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.kota-button {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px 100px;
+    transition: 0.3s;
+}
+
+.kota-card {
+    position: relative;
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.kota-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    transition: background 0.3s ease;
+    border-radius: 10px;
+}
+
+.kota-card:hover::before {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.kota-card a {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    z-index: 1;
+    text-align: center;
+}
+
+.kota-card a:hover {
+    text-decoration: underline;
+    font-size: 31px;
+}
+
+.footer {
+    background-image: linear-gradient(to right, white, rgb(205, 205, 205));
+    color: #4e297b;
+    display: flex;
+    align-items: flex-start;
+    padding: 40px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.logo-footer {
+    width: 150px;
+    padding: 20px;
+}
+
+.footer h2 {
+    font-size: 40px;
+    font-family: 'Brush Script MT', cursive;
+    margin-bottom: 12px;
+}
+
+.footer-text {
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    color: #643c94;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-text:hover {
+    text-decoration: underline;
+}
+
+.property {
+  display: flex;
+  background-color: #f9f9f9;
+  border-radius: 50px;
+  overflow: hidden;
+  padding: 30px;
+  gap: 20px;
+  transition: 1s;
+  
+}
+
+.photo-kos {
+  margin: 20px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 15px;
+  width: 550px;
+  max-height: 450px;
+  margin-right: 0px;
+}
+
+.photo-kos1, .photo-kos2 {
+  margin: 20px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 15px;
+  width: 350px;
+  max-height: 215px;
+}
+
+h1 {
+    font-size: 40px;
+    display: flex;
+    color: #4e297b;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-container {
+    display: flex;
+}
+
+.title-container h1 {
+    font-size: 40px;
+    display: flex;
+    color: #ffffff;
+}
+
+.gender {
+    margin-left: 10px;
+    margin-top: 25px;
+    font-size: 20px;
+    border: solid 1px #4e297b;
+    border-radius: 30px;
+    width: 100px;
+    padding: 2px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+
+.price-container {
+    display: flex;    
+    align-items: center; 
+}
+
+.price {
+  font-weight: bold;
+  color: #444;
+  font-size: 25px
+}
+
+.permonth {
+  font-weight: bold;
+  color: #4e297b;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+
+.address {
+    font-size: 20px;
+    max-width: 400px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.facility {
+    color: #643c94;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.facility-list {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 0;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.actions button {
+  padding: 6px 14px;
+  margin-left: 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.actions .edit {
+  width: 150px;
+  margin-top: 15px;
+  padding: 15px;
+  font-size: 20px;
+  background-image: linear-gradient( #522f7e, #643c94);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.actions .edit:hover {
+  width: 150x;
+  padding: 18px;
+  background-image: linear-gradient( rgb(228, 228, 228), white);
+  color: #643c94;
+  border: 1px solid #643c94;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.actions .delete {
+  width: 150px;
+  margin-top: 15px;
+  padding: 15px;
+  font-size: 20px;
+  background-image: linear-gradient( #ac2929, #c62828);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.actions .delete:hover {
+  width: 150x;
+  padding: 18px;
+  background-image: linear-gradient( rgb(228, 228, 228), white);
+  color: #c62828;
+  border: 1px solid #c62828;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.actions .add {
+  width: 250px;
+  margin-top: 15px;
+  padding: 35px;
+  font-size: 20px;
+  margin-left: 170px;
+  background-image: linear-gradient( #522f7e, #643c94);
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.actions .add:hover {
+  width: 260px;
+  padding: 40px;
+  background-image: linear-gradient( rgb(228, 228, 228), white);
+  color: #643c94;
+  border: 1px solid #643c94;
+  border-radius: 55px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 25px;
+}

@@ -1,0 +1,301 @@
+body {
+    color: #6B3FA0;
+    background-image: linear-gradient(to right, white, rgb(205, 205, 205));
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to right, #522f7e, #643c94);
+}
+
+.logo-header {
+    width: 100px;
+}
+
+.search-bar {
+    padding: 6px 10px;
+    margin-left: 30px;
+    border-radius: 25px;
+    width: 320px;
+    height: 30px;
+    border: none;
+    transition: 0.5s;
+}
+
+.search-bar:hover {
+    padding: 8px 12px;
+    transition: 0.5s;
+}
+
+.header-kiri {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.header-kanan a {
+    color: white;
+    margin: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header-kanan a:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    font-size: 20px;
+    padding: 10px 30px;
+    background-color: #6B3FA0;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+
+.login-button:hover {
+    background-color: #ffffff;
+    color: #643c94;
+    font-size: 22px;
+    scale: 0.05;
+    transition: 0.5s;
+}
+
+.catchphrase h1 {
+    text-align: left;
+    font-size: 80px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: roboto;
+    margin: 40px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    color: #4e297b;
+}
+
+
+.recomendation-top {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.rekomendasi-kos {
+    max-width: 490px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #643c94;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.rekomendasi-kos img {
+    width: 400px;
+    max-height: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+    justify-content: left;
+}
+
+.rekomendasi-kos:hover {
+    background-image: linear-gradient(#d5bbe6, #b99ace) ;
+    color: #4e297b;  
+    scale: 1.05;
+    transition: 0.5s;
+}
+
+.recomendation-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+}
+
+.recomendation-top {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: nowrap;
+    width: max-content;
+}
+
+.title-container {
+    display: flex;
+}
+
+.title-container h1 {
+    font-size: 40px;
+    display: flex;
+    color: #000000;
+}
+
+.gender {
+    margin-left: 10px;
+    margin-top: 25px;
+    font-size: 20px;
+    border: solid 1px #4e297b;
+    border-radius: 30px;
+    width: 100px;
+    padding: 2px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.price-container {
+    display: flex;    
+    align-items: center; 
+}
+
+.price {
+  font-weight: bold;
+  color: #000000;
+  font-size: 25px
+}
+
+.permonth {
+  font-weight: bold;
+  color: #4e297b;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+
+.address {
+    font-size: 20px;
+    max-width: 400px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.deskripsi {
+    background-image: linear-gradient( #522f7e, #643c94);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.deskripsi h3 {
+    font-style: italic;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.sub-deskripsi {
+    font-size: 25px;
+    max-width: 400px;
+    text-align: justify;
+    line-height: 1.5;
+    font-family:  'Brush Script MT', cursive;
+}
+
+.logo-subdivisi {
+    width: 100px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.daftar-kota h2 {
+    text-align: left;
+    padding-left: 100px;
+    font-style: italic;
+    font-size: 50px;
+    color: #522f7e;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.kota-button {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px 100px;
+}
+
+.kota-card {
+    position: relative;
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.kota-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    transition: background 0.3s ease;
+    border-radius: 10px;
+}
+
+.kota-card:hover::before {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.kota-card a {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    z-index: 1;
+    text-align: center;
+}
+
+.kota-card a:hover {
+    text-decoration: underline;
+    font-size: 31px;
+}
+
+.footer {
+    background-image: linear-gradient(to right, white, rgb(205, 205, 205));
+    color: #4e297b;
+    display: flex;
+    align-items: flex-start;
+    padding: 40px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.logo-footer {
+    width: 150px;
+    padding: 20px;
+}
+
+.footer h2 {
+    font-size: 40px;
+    font-family: 'Brush Script MT', cursive;
+    margin-bottom: 12px;
+}
+
+.footer-text {
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    color: #643c94;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-text:hover {
+    text-decoration: underline;
+}
