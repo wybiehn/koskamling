@@ -1,4 +1,4 @@
-<?php // wibi
+<?php
 
 use Illuminate\Support\Facades\Route;
 
