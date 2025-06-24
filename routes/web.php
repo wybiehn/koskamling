@@ -1,4 +1,4 @@
-<?php //awokwaok
+<?php // wibi
 
 use Illuminate\Support\Facades\Route;
 
