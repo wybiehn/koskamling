@@ -56,7 +56,7 @@
     
 
     <footer class="footer">
-        <img src="/Koskamling/img/ChatGPT Image 1 Mei 2025, 15.59.11.png" alt="koskamling-logo" class="logo-footer">
+        <img src="{{ asset('img/LogoFooter.png') }}" alt="Logo Footer" class="logo-footer">
         <div>
             <h2>Kebijakan</h2>
             <a href="#" class="footer-text">Kebijakan Privasi</a>
