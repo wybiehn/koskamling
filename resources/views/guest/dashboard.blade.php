@@ -1,11 +1,12 @@
+{{-- test komen --}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboardstyle.css">
+    <link rel="stylesheet" href="{{ asset('css/anonim/dashboardstyle.css') }}">
     <title>Homepage Koskamling</title>
-    <link rel="icon" href="/Koskamling/img/koskamling-logo.png">
+    <link rel="icon" href="{{ asset('img/koskamling-logo.png') }}">
 </head>
 
 <body>

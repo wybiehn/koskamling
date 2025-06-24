@@ -1,6 +1,6 @@
     <header class="header">
         <div class="header-kiri">
-            <img src="/Koskamling//img/koskamling-logo.png" alt="koskamling-logo" class="logo-header">
+            <img src="{{ asset('img/koskamling-logo.png') }}" alt="Logo Kos Kamling" class="logo-header">
         </div>
         <div class="header-kanan">
             <a href="#aboutus">About us</a>
