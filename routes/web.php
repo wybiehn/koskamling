@@ -11,31 +11,31 @@ Route::get('/1', function () {
 });
 
 Route::get('/2', function () {
-    return view('anonim.form-forgotpassword');
+    return view('guest.form-forgotpassword');
 });
 
 Route::get('/3', function () {
-    return view('anonim.form-login');
+    return view('guest.form-login');
 });
 
 Route::get('/4', function () {
-    return view('anonim.form-newpassword');
+    return view('guest.form-newpassword');
 });
 
 Route::get('/5', function () {
-    return view('anonim.form-register');
+    return view('guest.form-register');
 });
 
 Route::get('/6', function () {
-    return view('anonim.form-verification');
+    return view('guest.form-verification');
 });
 
 Route::get('/7', function () {
-    return view('anonim.homepage');
+    return view('guest.dashboard');
 });
 
 Route::get('/8', function () {
-    return view('anonim.kos-page-notlogin');
+    return view('guest.kos-page-notlogin');
 });
 
 Route::get('/9', function () {
