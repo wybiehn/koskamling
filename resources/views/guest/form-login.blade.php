@@ -153,31 +153,26 @@ form input:hover {
 <body>
 
   <div class="form-login">
-    <h2>Masuk Sebagai</h2>
+    <h2>Login</h2>
 
-    <div class="role-buttons">
+    {{-- <div class="role-buttons">
       <button class="role">Penyedia Kos</button>
       <button class="role">Pencari Kos</button>
-    </div>
+    </div> --}}
     <hr>
-    <form>
-      <label>Username</label>
-      <input type="email" placeholder="Contoh: meta_aprilia" required />
-
+    <form method="POST" action="{{ route('login.post') }}">
+      @csrf
       <label>Email</label>
-      <input type="email" placeholder="Contoh: meta@Gmail.com" required />
+      <input type="email" placeholder="Contoh: meta@Gmail.com" required name="email"/>
 
-      <label>Nomor Telepon</label>
-      <input type="no_hp" placeholder="Contoh: 08**-****-****" required />
-      
       <label>Kata Sandi</label>
-      <input type="password" placeholder="Contoh: meta123" required />
+      <input type="password" placeholder="Contoh: meta123" required name="password"/>
 
       <a href="form-forgotpassword.html" class="forgot">Lupa Kata Sandi?</a>
 
       <button type="submit" class="login-btn">Masuk</button>
 
-      <p class="register">Belum punya akun? <a href="form-register.html">Daftar</a></p>
+      <p class="register">Belum punya akun? <a href="/register">Daftar</a></p>
     </form>
   </div>
 

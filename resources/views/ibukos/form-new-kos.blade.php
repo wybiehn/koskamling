@@ -270,29 +270,29 @@ form select:hover {
     <hr>
     <form>
       <label>Nama Kos</label>
-      <input type="" placeholder="Contoh: Kos Permata Indah" required />
+      <input type="text" placeholder="Contoh: Kos Permata Indah" required name="name"/>
 
       <label>Kos diperuntukkan untuk</label>
-      <select id="">
-        <option value="">Laki-laki</option>
-        <option value="">Perempuan</option>
-        <option value="">Campuran</option>
+      <select id="" name="type">
+        <option value="Laki-laki">Laki-laki</option>
+        <option value="Perempuan">Perempuan</option>
+        <option value="Campuran">Campuran</option>
       </select>
 
       <label>Alamat</label>
-      <input type="" placeholder="Contoh: Jl.Kesambi gg.gong no.201" required />
+      <input type="text" placeholder="Contoh: Jl.Kesambi gg.gong no.201" required />
       
       <label>Kota Domilisi</label>
-      <select id="">
-        <option value="">Cirebon</option>
-        <option value="">Bandung</option>
-        <option value="">Jakarta</option>
-        <option value="">Surabaya</option>
-        <option value="">Yogyakarta</option>
-        <option value="">Purwokerto</option>
+      <select id="" name="address">
+        <option value="Cirebon">Cirebon</option>
+        <option value="Bandung">Bandung</option>
+        <option value="Jakarta">Jakarta</option>
+        <option value="Surabaya">Surabaya</option>
+        <option value="Yogyakarta">Yogyakarta</option>
+        <option value="Purwokerto">Purwokerto</option>
       </select>
 
-      <label>Jumlah Kamar</label>
+      {{-- <label>Jumlah Kamar</label>
       <select id="">
         <option value="">1</option>
         <option value="">2</option>
@@ -318,19 +318,19 @@ form select:hover {
         <option value="">22</option>
         <option value="">23</option>
         <option value="">24</option>
-      </select>
+      </select> --}}
 
       <label>Deskripsi</label>
-      <input type="" placeholder="Contoh: meta@Gmail.com" required />
+      <input type="text" placeholder="Contoh: meta@Gmail.com" required name="description"/>
 
       <label>Gambar kos 1 (Foto bangunan)</label>
-      <input type="file" name="gambar" accept="application/jpg" required>
-      <label>Gambar kos 2 (Foto kamar)</label>
+      <input type="file" name="image" accept="application/jpg" required>
+      {{-- <label>Gambar kos 2 (Foto kamar)</label>
       <input type="file" name="gambar" accept="application/jpg" required>
       <label>Gambar kos 3 (Foto wc)</label>
-      <input type="file" name="gambar" accept="application/jpg" required>
+      <input type="file" name="gambar" accept="application/jpg" required> --}}
 
-      <label>Luas kamar</label>
+      {{-- <label>Luas kamar</label>
       <div style="display: flex; align-items: center; gap: 20px;">
         <select style="max-width: 180px;" name="panjang" required>
           <option value="1">1</option>
@@ -350,8 +350,8 @@ form select:hover {
           <option value="6">6</option>
         </select>
       <span>m</span>
-      </div>
-
+      </div> --}}
+{{-- 
       <label>Listrik</label>
       <div class="radiobutton-con">
         <div class="radiobutton-list">
@@ -401,10 +401,10 @@ form select:hover {
           <label>Parkiran <input type="checkbox" name="fasilitas[]" value="parkiran"></label>
           <label>CCTV <input type="checkbox" name="fasilitas[]" value="cctv"></label>
         </div>
-      </div>
+      </div> --}}
 
   
-      <button style="margin-top: 30px;" type="submit" class="register-btn">Ajukan</button>
+      <button style="margin-top: 30px;" type="submit" class="register-btn">Simpan</button>
     </form>
   </div>
 

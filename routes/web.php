@@ -1,11 +1,26 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KosController;
+use App\Http\Controllers\AuthController;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::redirect('/', '/guest');
+Route::post('login', [AuthController::class, 'login'])->name('login.post');
+Route::post('register', [AuthController::class, 'register'])->name('register.post');
+Route::delete('logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::middleware(['auth'])->group(function () {
+    // Protected routes go here.
+    // Route::get('/dashboard', [App\Http\Controllers\::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [KosController::class, 'index'])->name('dashboard');
+    Route::get('/kos/create', [KosController::class, 'create'])->name('kos.create');
+    Route::post('/kos', [KosController::class, 'store'])->name('kos.store');
+    Route::get('/kos/{id}', [KosController::class, 'show'])->name('kos.show');
+    Route::get('/kos/{id}/edit', [KosController::class, 'edit'])->name('kos.edit');
+    Route::put('/kos/{id}', [KosController::class, 'update'])->name('kos.update');
+    Route::delete('/kos/{id}', [KosController::class, 'destroy'])->name('kos.destroy');
+
 });
-
 Route::get('/1', function () {
     return view('admin.dashboard2');
 });
@@ -14,25 +29,25 @@ Route::get('/2', function () {
     return view('guest.form-forgotpassword');
 });
 
-Route::get('/3', function () {
+Route::get('/login', function () {
     return view('guest.form-login');
-});
+})->name('login');
 
 Route::get('/4', function () {
     return view('guest.form-newpassword');
 });
 
-Route::get('/5', function () {
+Route::get('/register', function () {
     return view('guest.form-register');
 });
 
 Route::get('/6', function () {
     return view('guest.form-verification');
 });
-
-Route::get('/7', function () {
+Route::get('/guest', function () {
     return view('guest.dashboard');
 });
+
 
 Route::get('/8', function () {
     return view('guest.kos-page-notlogin');

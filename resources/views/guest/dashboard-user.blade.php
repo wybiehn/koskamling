@@ -18,7 +18,11 @@
         <div class="header-kanan">
             <a href="#aboutus">About us</a>
             <a href="#help">Help</a>
-            <a href="/login" class="login-button">Log in</a>
+            <form action="{{ route('logout') }}" method="post">
+                @csrf
+                @method("delete")
+                <input type="submit" class="login-button" value="Log out">
+            </form>
         </div>
     </header>
 

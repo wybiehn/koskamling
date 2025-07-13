@@ -155,31 +155,23 @@ form select:hover {
 <body>
 
   <div class="form-register">
-    <h2>Daftar Sebagai</h2>
+    <h2>Daftar</h2>
 
-    <div class="role-buttons">
+    {{-- <div class="role-buttons">
       <button class="role" value="">Penyedia Kos</button>
       <button class="role" value="">Pencari Kos</button>
-    </div>
+    </div> --}}
     <hr>
-    <form>
-      <label>Nama lengkap</label>
-      <input type="email" placeholder="Contoh: Shafa Meta" required />
+    <form method="POST" action="{{ route('register.post') }}">
+      @csrf
       <label>Username</label>
-      <input type="username" placeholder="Contoh: meta_aprilia" required />
+      <input type="username" placeholder="Contoh: meta_aprilia" required name="username"/>
       <label>Email</label>
-      <input type="email" placeholder="Contoh: meta@Gmail.com" required />
+      <input type="email" placeholder="Contoh: meta@Gmail.com" required name="email"/>
       <label>Kata Sandi</label>
-      <input type="password" placeholder="Contoh: meta123" required />
-      <label>Nomor telepon</label>
-      <input type="no.hp" placeholder="Contoh: 08**-****-****" required />
-      <label>Jenis kelamin</label>
-      <select id="">
-        <option value="">Laki-laki</option>
-        <option value="">Perempuan</option>
-      </select>
-      <button type="submit" class="register-btn">Daftar</button>
-      <p class="login">Sudah punya akun? <a href="form-login.html">Login</a></p>
+      <input type="password"  required name="password"/>
+      <input type="submit" class="register-btn" value="Daftar"></input>
+      <p class="login">Sudah punya akun? <a href="/login">Login</a></p>
     </form>
   </div>
 
