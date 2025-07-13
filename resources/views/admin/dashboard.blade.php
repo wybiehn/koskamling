@@ -41,7 +41,7 @@
                 <tr>
                     <th scope="col">No</th>
                     <th scope="col">Nama Kos</th>
-                    <th scope="col">Jenis Kelamin</th>
+                    <th scope="col">Tipe</th>
                     <th scope="col">Harga</th>
                     <th scope="col">Alamat</th>
                     <th scope="col">Aksi</th>
@@ -51,10 +51,11 @@
                 @foreach ($kos as $k)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $k->nama_kos }}</td>
-                    <td>{{ $k->jenis_kelamin }}</td>
-                    <td>{{ $k->harga }}</td>
-                    <td>{{ $k->alamat }}</td>
+                    <td>{{ $k->name }}</td>
+                    <td>{{ $k->type }}</td>
+                    <td>Rp. {{ number_format($k->price, 0, ',', '.') }}</td>
+                    <td>{{ $k->address }}, {{ $k->city }}</td> 
+                    
                     <td><a href="/admin/kos/{{ $k->id }}/edit" class="btn btn-primary">Edit</a></td>
                 </tr>
                 @endforeach

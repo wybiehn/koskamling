@@ -14,7 +14,7 @@ Route::middleware(['auth'])->group(function () {
     // Route::get('/dashboard', [App\Http\Controllers\::class, 'index'])->name('dashboard');
     Route::get('/dashboard', [KosController::class, 'index'])->name('dashboard');
     Route::get('/kos/create', [KosController::class, 'create'])->name('kos.create');
-    Route::post('/kos', [KosController::class, 'store'])->name('kos.store');
+    Route::post('/kos/store', [KosController::class, 'store'])->name('kos.store');
     Route::get('/kos/{id}', [KosController::class, 'show'])->name('kos.show');
     Route::get('/kos/{id}/edit', [KosController::class, 'edit'])->name('kos.edit');
     Route::put('/kos/{id}', [KosController::class, 'update'])->name('kos.update');

@@ -268,7 +268,8 @@ form select:hover {
   <div class="form-register">
     <h2>Tambah kos baru</h2>
     <hr>
-    <form>
+    <form action="{{ route('kos.store') }}" method="POST">
+      @csrf
       <label>Nama Kos</label>
       <input type="text" placeholder="Contoh: Kos Permata Indah" required name="name"/>
 
@@ -280,10 +281,10 @@ form select:hover {
       </select>
 
       <label>Alamat</label>
-      <input type="text" placeholder="Contoh: Jl.Kesambi gg.gong no.201" required />
+      <input type="text" name="address" placeholder="Contoh: Jl.Kesambi gg.gong no.201" required />
       
       <label>Kota Domilisi</label>
-      <select id="" name="address">
+      <select id="" name="city">
         <option value="Cirebon">Cirebon</option>
         <option value="Bandung">Bandung</option>
         <option value="Jakarta">Jakarta</option>
@@ -322,9 +323,14 @@ form select:hover {
 
       <label>Deskripsi</label>
       <input type="text" placeholder="Contoh: meta@Gmail.com" required name="description"/>
+      <label>Harga per bulan</label>
+      <input type="number" placeholder="Contoh: 1200000" required name="price"/>
+      <label>Nomor kontak</label>
+      <input type="number" placeholder="Contoh: 08123456789" required name="contact_number"/>
 
+      {{-- <label>Fasilitas yang disediakan  </label>
       <label>Gambar kos 1 (Foto bangunan)</label>
-      <input type="file" name="image" accept="application/jpg" required>
+      <input type="file" name="image" >
       {{-- <label>Gambar kos 2 (Foto kamar)</label>
       <input type="file" name="gambar" accept="application/jpg" required>
       <label>Gambar kos 3 (Foto wc)</label>

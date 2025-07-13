@@ -31,17 +31,21 @@ class KosController
     {
         // Logic to store a new kos
         $data = $request->validate([
-            'image' => 'nullable|string',
+            'image' => 'nullable|image|max:2048',
             'name' => 'required|string|max:255',
-            'address' => 'required|string|max:255',
+            'address' => 'required',
             'city' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'type' => 'required|in:putra,putri,campur',
-            'price' => 'required|integer',
-            'contact_number' => 'nullable|integer',
+            'description' => 'nullable',
+            'type' => 'required',
+            'price' => 'required',
+            'contact_number' => 'nullable',
         ]);
+        // Create a new kos instance and save it to the database
+        // $data['image'] = $request->file('image')->store('images', 'public');
 
-        Kos::create($data);
+        Kos::create(
+            $data
+        );
 
         return redirect()->route('dashboard')->with('success', 'Kos created successfully.');
     }

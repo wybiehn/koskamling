@@ -15,12 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('image')->nullable();
             $table->string('name');
-            $table->string('address');
-            // $table->string('city');
-            $table->string('description')->nullable();
+            $table->text('address');
+            $table->string('city');
+            $table->text('description')->nullable();
             $table->enum('type',["Laki-laki", "Perempuan", "Campuran"]);
-            $table->integer('price');
-            $table->integer('contact_number')->nullable();
+            $table->string('price');
+            $table->string('contact_number')->nullable();
             $table->timestamps();
         });
     }
