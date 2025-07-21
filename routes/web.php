@@ -19,7 +19,7 @@ Route::get('/register', function () {
     return view('guest.form-register');
 })->name('register');
 Route::post('register', [AuthController::class, 'register'])->name('register.post');
-Route::delete('logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
     Route::controller(KosController::class)->prefix('kos')->name('kos.')->group(function () {

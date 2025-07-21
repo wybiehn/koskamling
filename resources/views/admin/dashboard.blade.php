@@ -20,7 +20,7 @@
         <div class="header-kanan">
             <a href="#aboutus">About us</a>
             <a href="#help">Help</a>
-            <a href="{{ route('logout') }}" class="login-button">Log out</a>
+            <a href="/logout" class="login-button">Log out</a>
         </div>
     </header>
 

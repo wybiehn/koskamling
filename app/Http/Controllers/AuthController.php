@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class AuthController
 {
@@ -18,7 +19,6 @@ class AuthController
             // Authentication passed...
             $user = Auth::user();
             return redirect()->route('kos.index')->with('success', 'Login successful');
-
         } else {
             return response()->json([
                 'message' => 'Invalid credentials',
@@ -51,12 +51,12 @@ class AuthController
         //     'message' => 'Registration successful',
         //     'user' => $user,
         // ]);
-        return redirect('login')->with('success', 'Registration successful. Please login.')   ;
+        return redirect('login')->with('success', 'Registration successful. Please login.');
     }
     public function logout(Request $request)
     {
-        // Logic for user logout
+        Session::flush();
         Auth::logout();
-        return redirect('/guest')->with('success', 'Logout successful');
+        return redirect('/')->with('success', 'Logout successful');
     }
 }
