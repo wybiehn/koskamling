@@ -17,13 +17,18 @@ class AuthController
         if (Auth::attempt($credentials)) {
             // Authentication passed...
             $user = Auth::user();
-            return redirect('/dashboard')->with('success', 'Login successful');
-            
+            return redirect()->route('kos.index')->with('success', 'Login successful');
+
         } else {
             return response()->json([
                 'message' => 'Invalid credentials',
             ], 401);
         }
+    }
+    public function forgotPassword()
+    {
+        // Logic to show the forgot password form
+        return view('guest.form-forgotpassword');
     }
     public function register(Request $request)
     {
@@ -34,7 +39,7 @@ class AuthController
             'password' => 'required|string|min:8',
         ]);
 
-        
+
 
         $user = User::create([
             'username' => $data['username'],

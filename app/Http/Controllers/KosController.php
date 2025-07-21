@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class KosController
 {
@@ -25,7 +26,7 @@ class KosController
     public function create()
     {
         // Logic to show the form for creating a new kos
-        return view('ibukos.form-new-kos'); 
+        return view('ibukos.form-new-kos');
     }
     public function store(Request $request)
     {
@@ -54,7 +55,7 @@ class KosController
             ]
         );
 
-        return redirect()->route('dashboard')->with('success', 'Kos created successfully.');
+        return redirect()->route('kos.index')->with('success', 'Kos created successfully.');
     }
     public function edit($id)
     {
@@ -68,23 +69,33 @@ class KosController
         // Logic to update an existing kos
         $kos = Kos::findOrFail($id);
         $data = $request->validate([
-            'image' => 'nullable|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'name' => 'required|string|max:255',
             'address' => 'required|string|max:255',
             'city' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'type' => 'required|in:putra,putri,campur',
+            'type' => 'required|string',
             'price' => 'required|integer',
             'contact_number' => 'nullable|integer',
         ]);
+
+        if ($request->hasFile('image')) {
+            // Delete old image if exists
+            if ($kos->image) {
+                Storage::disk('public')->delete('images/' . basename($kos->image));
+            }
+            // Store new image
+            $data['image'] = $request->file('image')->store('images', 'public');
+        }
+
         $kos->update($data);
-        return redirect()->route('dashboard')->with('success', 'Kos updated successfully.');
+        return redirect()->route('kos.index')->with('success', 'Kos updated successfully.');
     }
     public function destroy($id)
     {
         // Logic to delete a kos
         $kos = Kos::findOrFail($id);
         $kos->delete();
-        return redirect()->route('dashboard')->with('success', 'Kos deleted successfully.');
+        return redirect()->route('kos.index')->with('success', 'Kos deleted successfully.');
     }
 }
