@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KosController;
 use App\Http\Controllers\AuthController;
+use App\Models\Kos;
 
 Route::redirect('/', '/guest');
 Route::post('login', [AuthController::class, 'login'])->name('login.post');
@@ -44,8 +45,10 @@ Route::get('/register', function () {
 Route::get('/6', function () {
     return view('guest.form-verification');
 });
+
 Route::get('/guest', function () {
-    return view('guest.dashboard');
+    $kos = Kos::all();
+    return view('guest.dashboard', compact('kos'));
 });
 
 

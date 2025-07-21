@@ -10,7 +10,7 @@ class KosController
     //
     public function index()
     {
-        $kos = Kos::all();
+        $kos = Kos::all()->sortBy('created_at');
 
         // Logic to display the list of kos
         return view('admin.dashboard', compact('kos'));
@@ -30,8 +30,8 @@ class KosController
     public function store(Request $request)
     {
         // Logic to store a new kos
-        $data = $request->validate([
-            'image' => 'nullable|image|max:2048',
+        $request->validate([
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'name' => 'required|string|max:255',
             'address' => 'required',
             'city' => 'required|string|max:255',
@@ -40,11 +40,18 @@ class KosController
             'price' => 'required',
             'contact_number' => 'nullable',
         ]);
-        // Create a new kos instance and save it to the database
-        // $data['image'] = $request->file('image')->store('images', 'public');
 
         Kos::create(
-            $data
+            [
+                'image' => $request->file('image') ? $request->file('image')->store('images', 'public') : null,
+                'name' => $request->input('name'),
+                'address' => $request->input('address'),
+                'city' => $request->input('city'),
+                'description' => $request->input('description'),
+                'type' => $request->input('type'),
+                'price' => $request->input('price'),
+                'contact_number' => $request->input('contact_number'),
+            ]
         );
 
         return redirect()->route('dashboard')->with('success', 'Kos created successfully.');

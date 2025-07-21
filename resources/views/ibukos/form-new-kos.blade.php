@@ -260,7 +260,7 @@ form select:hover {
         <div class="header-kanan">
             <a href="#aboutus">About us</a>
             <a href="#help">Help</a>
-            <a href="" class="login-button">Log out</a>
+            <a href="" class="login-button">Cancel</a>
         </div>
     </header>
 
@@ -268,7 +268,7 @@ form select:hover {
   <div class="form-register">
     <h2>Tambah kos baru</h2>
     <hr>
-    <form action="{{ route('kos.store') }}" method="POST">
+    <form action="{{ route('kos.store') }}" method="POST" enctype="multipart/form-data">
       @csrf
       <label>Nama Kos</label>
       <input type="text" placeholder="Contoh: Kos Permata Indah" required name="name"/>
@@ -322,15 +322,15 @@ form select:hover {
       </select> --}}
 
       <label>Deskripsi</label>
-      <input type="text" placeholder="Contoh: meta@Gmail.com" required name="description"/>
+      <input type="text" placeholder="Contoh: Kos dengan fasilitas mewah." required name="description"/>
       <label>Harga per bulan</label>
       <input type="number" placeholder="Contoh: 1200000" required name="price"/>
       <label>Nomor kontak</label>
       <input type="number" placeholder="Contoh: 08123456789" required name="contact_number"/>
 
-      {{-- <label>Fasilitas yang disediakan  </label>
-      <label>Gambar kos 1 (Foto bangunan)</label>
-      <input type="file" name="image" >
+      <label>Fasilitas yang disediakan  </label>
+      <label>Gambar kos (Foto bangunan)</label>
+      <input type="file" name="image" accept="image/*">
       {{-- <label>Gambar kos 2 (Foto kamar)</label>
       <input type="file" name="gambar" accept="application/jpg" required>
       <label>Gambar kos 3 (Foto wc)</label>

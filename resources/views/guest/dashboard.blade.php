@@ -28,76 +28,22 @@
 
     <div class="recomendation-wrapper">
         <div class="recomendation-top">
-            <div class="rekomendasi-kos">
+            @foreach ($kos as $data)
+                <div class="rekomendasi-kos">
                 <a href="kos-page-notlogin.html" style="text-decoration: none;">
-                <img src="{{ asset('img/kamar_contoh.jpg') }}" alt="Kos 1">
+                <img src="{{ Storage::url($data->image) }}" alt="Kos 1">
                 <div class="title-container">
-                    <h1>Kos Tirta</h1>
-                    <h3 class="gender">Putra</h3>
+                    <h1>{{ $data->name }}</h1>
+                    <h3 class="gender">{{ $data->type }}</h3>
                 </div>
                 <div class="price-container">
-                    <span class="price">Rp. 1.200.000</span>
+                    <span class="price">{{ $data->price }}</span>
                     <span class="permonth">/bulan</span>
                 </div> 
-                <p class="address">Jl. Raya No. 190 Blok Jambu Biji RT. 39/RW. 98 Cirebon, Jawa Barat</p>
+                <p class="address">{{ $data->address }}</p>
                 </a>
             </div>
-           <div class="rekomendasi-kos">
-                <a href="kos-page-notlogin.html" style="text-decoration: none;">
-                <img src="{{ asset('img/kamar_contoh.jpg') }}" alt="Kos 1">
-                <div class="title-container">
-                    <h1>Kos Tirta</h1>
-                    <h3 class="gender">Putra</h3>
-                </div>
-                <div class="price-container">
-                    <span class="price">Rp. 1.200.000</span>
-                    <span class="permonth">/bulan</span>
-                </div> 
-                <p class="address">Jl. Raya No. 190 Blok Jambu Biji RT. 39/RW. 98 Cirebon, Jawa Barat</p>
-                </a>
-            </div>
-            <div class="rekomendasi-kos">
-                <a href="kos-page-notlogin.html" style="text-decoration: none;">
-                <img src="{{ asset('img/kamar_contoh.jpg') }}" alt="Kos 1">
-                <div class="title-container">
-                    <h1>Kos Tirta</h1>
-                    <h3 class="gender">Putra</h3>
-                </div>
-                <div class="price-container">
-                    <span class="price">Rp. 1.200.000</span>
-                    <span class="permonth">/bulan</span>
-                </div> 
-                <p class="address">Jl. Raya No. 190 Blok Jambu Biji RT. 39/RW. 98 Cirebon, Jawa Barat</p>
-                </a>
-            </div>
-            <div class="rekomendasi-kos">
-                <a href="kos-page-notlogin.html" style="text-decoration: none;">
-                <img src="{{ asset('img/kamar_contoh.jpg') }}" alt="Kos 1">
-                <div class="title-container">
-                    <h1>Kos Tirta</h1>
-                    <h3 class="gender">Putra</h3>
-                </div>
-                <div class="price-container">
-                    <span class="price">Rp. 1.200.000</span>
-                    <span class="permonth">/bulan</span>
-                </div> 
-                <p class="address">Jl. Raya No. 190 Blok Jambu Biji RT. 39/RW. 98 Cirebon, Jawa Barat</p>
-                </a>
-            </div>
-            <div class="rekomendasi-kos">
-                <a href="kos-page-notlogin.html" style="text-decoration: none;">
-                <img src="{{ asset('img/kamar_contoh.jpg') }}" alt="Kos 1">
-                <div class="title-container">
-                    <h1>Kos Tirta</h1>
-                    <h3 class="gender">Putra</h3>
-                </div>
-                <div class="price-container">
-                    <span class="price">Rp. 1.200.000</span>
-                    <span class="permonth">/bulan</span>
-                </div> 
-                <p class="address">Jl. Raya No. 190 Blok Jambu Biji RT. 39/RW. 98 Cirebon, Jawa Barat</p>
-                </a>
-            </div>
+            @endforeach
         </div>
     </div>
 

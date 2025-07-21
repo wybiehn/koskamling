@@ -290,7 +290,7 @@ form select:hover {
         <option value="">Purwokerto</option>
       </select>
 
-      <label>Jumlah Kamar</label>
+      {{-- <label>Jumlah Kamar</label>
       <select id="">
         <option value="">1</option>
         <option value="">2</option>
@@ -316,19 +316,23 @@ form select:hover {
         <option value="">22</option>
         <option value="">23</option>
         <option value="">24</option>
-      </select>
+      </select> --}}
 
       <label>Deskripsi</label>
-      <input type="" placeholder="Contoh: meta@Gmail.com" required />
+      <input type="" placeholder="Contoh: Kos dengan kualitas mewah" required />
+      <label>Harga per bulan</label>
+      <input type="number" placeholder="Contoh: 1200000" required name="price"/>
+      <label>Nomor kontak</label>
+      <input type="number" placeholder="Contoh: 08123456789" required name="contact_number"/>
 
-      <label>Gambar kos 1 (Foto bangunan)</label>
+      <label>Gambar kos (Foto bangunan)</label>
       <input type="file" name="gambar" accept="application/jpg" required>
-      <label>Gambar kos 2 (Foto kamar)</label>
+      {{-- <label>Gambar kos 2 (Foto kamar)</label>
       <input type="file" name="gambar" accept="application/jpg" required>
       <label>Gambar kos 3 (Foto wc)</label>
-      <input type="file" name="gambar" accept="application/jpg" required>
+      <input type="file" name="gambar" accept="application/jpg" required> --}}
 
-      <label>Luas kamar</label>
+      {{-- <label>Luas kamar</label>
       <div style="display: flex; align-items: center; gap: 20px;">
         <select style="max-width: 180px;" name="panjang" required>
           <option value="1">1</option>
@@ -348,25 +352,25 @@ form select:hover {
           <option value="6">6</option>
         </select>
       <span>m</span>
-      </div>
-
+      </div> --}}
+{{-- 
       <label>Listrik</label>
       <div class="radiobutton-con">
         <div class="radiobutton-list">
           <label>Ya<input type="radio" name="listrik" value="ya" required></label>
           <label>Tidak<input type="radio" name="listrik" value="tidak" required></label>
         </div>
-      </div>
+      </div> --}}
 
-      <label>Air</label>
+      {{-- <label>Air</label>
       <div class="radiobutton-con">
         <div class="radiobutton-list">
           <label>Ya<input type="radio" name="air" value="ya" required></label>
           <label>Tidak<input type="radio" name="air" value="tidak" required></label>
         </div>
-      </div>
+      </div> --}}
 
-      <label>Fasilitas yang disediakan  </label>
+      {{-- <label>Fasilitas yang disediakan  </label>
       <div class="checkbox-con">
         <div class="checkbox-list">
           <label>Kasur <input type="checkbox" name="fasilitas[]" value="kasur"></label>
@@ -378,25 +382,25 @@ form select:hover {
           <label>Jendela <input type="checkbox" name="fasilitas[]" value="jendela"></label>
           <label>TV <input type="checkbox" name="fasilitas[]" value="tv"></label>
         </div>
-      </div>
+      </div> --}}
 
-      <label>Kamar mandi</label>
+      {{-- <label>Kamar mandi</label>
       <div class="radiobutton-con">
         <div class="radiobutton-list">
           <label>Dalam<input type="radio" name="kamar-mandi" value="dalam" required></label>
           <label>Luar<input type="radio" name="kamar-mandi" value="luar" required></label>
         </div>
-      </div>
+      </div> --}}
 
-      <label>WC</label>
+      {{-- <label>WC</label>
       <div class="radiobutton-con">
         <div class="radiobutton-list">
           <label>Duduk<input type="radio" name="wc" value="Duduk" required></label>
           <label>Jongkok<input type="radio" name="wc" value="Jongkok" required></label>
         </div>
-      </div>
+      </div> --}}
 
-      <label>Fasilitas kamar mandi</label>
+      {{-- <label>Fasilitas kamar mandi</label>
       <div class="checkbox-con">
         <div class="checkbox-list">
           <label>Shower <input type="checkbox" name="fasilitas[]" value="shower"></label>
@@ -405,9 +409,9 @@ form select:hover {
           <label>Ember <input type="checkbox" name="fasilitas[]" value="ember"></label>
           <label>Wastafel <input type="checkbox" name="fasilitas[]" value="wastafel"></label>
         </div>
-      </div>
+      </div> --}}
 
-      <label>Fasilitas Umum</label>
+      {{-- <label>Fasilitas Umum</label>
       <div class="checkbox-con">
         <div class="checkbox-list">
           <label>Wi-Fi <input type="checkbox" name="fasilitas[]" value="wifi"></label>
@@ -418,7 +422,7 @@ form select:hover {
           <label>Parkiran <input type="checkbox" name="fasilitas[]" value="parkiran"></label>
           <label>CCTV <input type="checkbox" name="fasilitas[]" value="cctv"></label>
         </div>
-      </div>
+      </div> --}}
 
   
       <button style="margin-top: 30px;" type="submit" class="register-btn">Ajukan</button>

@@ -13,7 +13,7 @@
 <body ">
     <header class="header">
         <div class="header-kiri">
-            <img src="/Koskamling//img/koskamling-logo.png" alt="koskamling-logo" class="logo-header">
+            <img src="{{ asset('img/koskamling-logo.png') }}" class="logo-header">
         </div>
         <div class="header-kanan">
             <a href="#aboutus">About us</a>
@@ -23,7 +23,7 @@
     </header>
 
 <div class="container">
-
+AWAWE
 
     <section class="question">
         <h2>Apa yang Ingin anda lakukan hari ini?</h2>
@@ -42,7 +42,7 @@
                     <th scope="col">No</th>
                     <th scope="col">Nama Kos</th>
                     <th scope="col">Tipe</th>
-                    <th scope="col">Harga</th>
+                    <th scope="col">Harga/bulan</th>
                     <th scope="col">Alamat</th>
                     <th scope="col">Aksi</th>
                 </tr>
@@ -68,7 +68,7 @@
     </div>
 
     <footer class="footer">
-        <img src="/Koskamling/img/ChatGPT Image 1 Mei 2025, 15.59.11.png" alt="koskamling-logo" class="logo-footer">
+        <img src="{{ asset('img/logo-ungu.png') }}" alt="koskamling-logo" width="150">
         <div>
             <h2>Kebijakan</h2>
             <a href="#" class="footer-text">Kebijakan Privasi</a>
