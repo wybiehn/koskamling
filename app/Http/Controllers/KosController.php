@@ -95,6 +95,10 @@ class KosController
     {
         // Logic to delete a kos
         $kos = Kos::findOrFail($id);
+        // Delete the image if it exists
+        if ($kos->image) {
+            Storage::disk('public')->delete('images/' . basename($kos->image));
+        }
         $kos->delete();
         return redirect()->route('kos.index')->with('success', 'Kos deleted successfully.');
     }
